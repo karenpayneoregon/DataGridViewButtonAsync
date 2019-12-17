@@ -20,7 +20,7 @@ namespace SqlDataOperations
             DefaultCatalog = "NorthWindAzure";
         }
 
-        public DataTable LoadCustomerData(bool pHidePrimaryKey = true)
+        public async Task<DataTable> LoadCustomerData(bool pHidePrimaryKey = true)
         {
             mHasException = false;
 
@@ -38,7 +38,7 @@ namespace SqlDataOperations
                              "INNER JOIN ContactType ON C.ContactTypeIdentifier = ContactType.ContactTypeIdentifier;";
 
                         cn.Open();
-                        dt.Load(cmd.ExecuteReader());
+                        dt.Load(await cmd.ExecuteReaderAsync());
 
                         dt.Columns["ContactTypeIdentifier"].ColumnMapping = MappingType.Hidden;
 

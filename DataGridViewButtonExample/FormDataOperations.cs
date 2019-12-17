@@ -35,9 +35,9 @@ namespace DataGridViewButtonExample
         {
             Operations = new Operations();
         }
-        public void LoadCustomers()
+        public async Task LoadCustomers()
         {
-            BindingSource = new BindingSource {DataSource = Operations.LoadCustomerData()};
+            BindingSource = new BindingSource {DataSource = await Operations.LoadCustomerData()};
         }
         public async Task LoadContactTypesAsync()
         {

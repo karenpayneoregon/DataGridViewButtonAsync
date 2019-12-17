@@ -23,7 +23,7 @@ namespace DataGridViewButtonExample
         }
         private async void Form1_Shown(object sender, EventArgs e)
         {
-            formData.LoadCustomers();
+            await formData.LoadCustomers();
             await formData.LoadContactTypesAsync();
 
 
