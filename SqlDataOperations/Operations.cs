@@ -78,8 +78,8 @@ namespace SqlDataOperations
                             contactList.Add(new ContactType()
                             {
                                 ContactTypeIdentifier = await reader.GetFieldValueAsync<int>(0),
-                                ContactTitle = reader.GetString(1)
-                                
+                                ContactTitle = await reader.GetFieldValueAsync<string>(1)
+
                             });
 
                         }
@@ -91,6 +91,7 @@ namespace SqlDataOperations
                     }
                 }
             }
+
 
             return contactList;
         }
