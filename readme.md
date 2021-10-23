@@ -14,5 +14,5 @@ Added stub code for button conext menu
 
 Remove button does not have a menu while the Edit button has a menu with two items, click events with no actions.
 
-![img](assets/dgvButtons.png)
+![img](assets/ButtonContextMenu.png)
 
