@@ -10,14 +10,14 @@ namespace SqlDataOperations
 {
     /// <summary>
     /// BaseSqlServerConnections handles connections which can be overridden
-    /// along with implementing BaseExceptionhandler for implementing default 
+    /// along with implementing BaseExceptionHandler for implementing default 
     /// exception handling in try/catch statements
     /// </summary>
     public class Operations : BaseSqlServerConnections
     {
         public Operations()
         {
-            DefaultCatalog = "NorthWindAzure";
+            DefaultCatalog = Environment.UserName == "PayneK" ? "NorthWindAzure4" : "NorthWindAzure";
         }
 
         public async Task<DataTable> LoadCustomerData(bool pHidePrimaryKey = true)

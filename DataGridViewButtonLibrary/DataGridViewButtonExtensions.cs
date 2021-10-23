@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace DataGridViewButtonLibrary
 {
@@ -8,7 +10,7 @@ namespace DataGridViewButtonLibrary
         {
             bool Result = false;
 
-            if (pDataGridView.CurrentCell.Value.ToString() == pCellName.Replace(pPostFix,""))
+            if (pDataGridView.CurrentCell.Value.ToString() == pCellName.Replace(pPostFix, ""))
             {
                 if (((DataGridViewDisableButtonCell)pDataGridView.Rows[pDataGridView.CurrentRow.Index].Cells[pCellName]).Enabled)
                 {
@@ -40,8 +42,9 @@ namespace DataGridViewButtonLibrary
             ((DataGridViewDisableButtonCell)(pDataGridView.Rows[pDataGridView.CurrentRow.Index]
                 .Cells[pCellName])).Enabled = true;
 
+
         }
-        public static void CreateUnboundButtonColumn(this DataGridView pDataGridView, string pColumnName,string pColumnText, string pHeaderText, int pWith = 60)
+        public static void CreateUnboundButtonColumn(this DataGridView pDataGridView, string pColumnName, string pColumnText, string pHeaderText, int pWith = 60)
         {
 
             DataGridViewDisableButtonColumn Column = new DataGridViewDisableButtonColumn
@@ -50,11 +53,51 @@ namespace DataGridViewButtonLibrary
                 Name = pColumnName,
                 Text = pColumnText,
                 Width = pWith,
-                UseColumnTextForButtonValue = true
+                UseColumnTextForButtonValue = true,
+                ContextMenuStrip = EditButtonContextMenuStrip(pColumnName)
             };
 
             pDataGridView.Columns.Insert(pDataGridView.ColumnCount, Column);
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="columnName"></param>
+        /// <returns></returns>
+        public static ContextMenuStrip EditButtonContextMenuStrip(string columnName)
+        {
+            if (columnName == "EditColumn")
+            {
+                var strip = new ContextMenuStrip()
+                {
+                    Items =
+                    {
+                        new ToolStripMenuItem("Option 1"),
+                        new ToolStripMenuItem("Option 2")
+                    }
+                };
+
+                strip.Items[0].Click += Option1OnClick;
+                strip.Items[1].Click += Option2OnClick;
+
+                return strip;
+            }
+            else
+            {
+                return new ContextMenuStrip();
+            }
+
+        }
+
+        private static void Option1OnClick(object sender, EventArgs e)
+        {
+            // TODO
+        }
+        private static void Option2OnClick(object sender, EventArgs e)
+        {
+            // TODO
         }
     }
 }

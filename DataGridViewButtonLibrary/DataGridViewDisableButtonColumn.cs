@@ -18,27 +18,15 @@ namespace DataGridViewButtonLibrary
         private bool mEnabledValue;
         public bool Enabled
         {
-            get
-            {
-                return mEnabledValue;
-            }
-            set
-            {
-                mEnabledValue = value;
-            }
+            get => mEnabledValue;
+            set => mEnabledValue = value;
         }
 
         private bool mShowDisabledText;
         public bool ShowDisabledText
         {
-            get
-            {
-                return mShowDisabledText;
-            }
-            set
-            {
-                mShowDisabledText = value;
-            }
+            get => mShowDisabledText;
+            set => mShowDisabledText = value;
         }
 
         // Override the Clone method so that the Enabled property is copied.
@@ -52,14 +40,14 @@ namespace DataGridViewButtonLibrary
         // By default, enable the button cell.
         public DataGridViewDisableButtonCell()
         {
-            this.mEnabledValue = true;
-            this.mShowDisabledText = false;
+            mEnabledValue = true;
+            mShowDisabledText = false;
         }
 
         protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates elementState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
         {
             // The button cell is disabled, so paint the border, background, and disabled button for the cell.
-            if (!this.mEnabledValue)
+            if (!mEnabledValue)
             {
                 // Draw the background of the cell, if specified.
                 if ((paintParts & DataGridViewPaintParts.Background) == DataGridViewPaintParts.Background)
@@ -89,9 +77,9 @@ namespace DataGridViewButtonLibrary
                     ButtonRenderer.DrawButton(graphics, buttonArea, System.Windows.Forms.VisualStyles.PushButtonState.Disabled);
 
                     // Draw the disabled button text. 
-                    if (this.FormattedValue is string)
+                    if (FormattedValue is string)
                     {
-                        TextRenderer.DrawText(graphics, Convert.ToString(this.FormattedValue), this.DataGridView.Font, buttonArea, SystemColors.GrayText);
+                        TextRenderer.DrawText(graphics, Convert.ToString(FormattedValue), DataGridView.Font, buttonArea, SystemColors.GrayText);
                     }
                 }
 

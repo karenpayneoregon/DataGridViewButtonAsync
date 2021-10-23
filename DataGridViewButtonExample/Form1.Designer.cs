@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdAddNewCustomer = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cmdAddNewCustomer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +45,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(685, 56);
             this.panel1.TabIndex = 0;
+            // 
+            // cmdAddNewCustomer
+            // 
+            this.cmdAddNewCustomer.Location = new System.Drawing.Point(12, 18);
+            this.cmdAddNewCustomer.Name = "cmdAddNewCustomer";
+            this.cmdAddNewCustomer.Size = new System.Drawing.Size(75, 23);
+            this.cmdAddNewCustomer.TabIndex = 8;
+            this.cmdAddNewCustomer.Text = "Add row";
+            this.cmdAddNewCustomer.UseVisualStyleBackColor = true;
+            this.cmdAddNewCustomer.Click += new System.EventHandler(this.cmdAddNewCustomer_Click);
             // 
             // closeButton
             // 
@@ -67,16 +77,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(685, 207);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // cmdAddNewCustomer
-            // 
-            this.cmdAddNewCustomer.Location = new System.Drawing.Point(12, 18);
-            this.cmdAddNewCustomer.Name = "cmdAddNewCustomer";
-            this.cmdAddNewCustomer.Size = new System.Drawing.Size(75, 23);
-            this.cmdAddNewCustomer.TabIndex = 8;
-            this.cmdAddNewCustomer.Text = "Add row";
-            this.cmdAddNewCustomer.UseVisualStyleBackColor = true;
-            this.cmdAddNewCustomer.Click += new System.EventHandler(this.cmdAddNewCustomer_Click);
             // 
             // Form1
             // 

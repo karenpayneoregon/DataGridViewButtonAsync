@@ -8,3 +8,11 @@ There are several methods to permit editing and removal of records displayed in 
 ### Asynchronous data reads
 Although there is no actual need for reading database tables using asynchronous programming model TAP this code sample does which had been done off-hand to show performing reads without explicitly defining a task but instead utilizing async methods available in the .NET Framework.
 
+### Update 10/2021
+
+Added stub code for button conext menu
+
+Remove button does not have a menu while the Edit button has a menu with two items, click events with no actions.
+
+![img](assets/dgvButtons.png)
+
