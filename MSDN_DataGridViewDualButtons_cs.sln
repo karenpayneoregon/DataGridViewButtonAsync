@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewButtonLibrary", "DataGridViewButtonLibrary\DataGridViewButtonLibrary.csproj", "{477E40CC-10A1-4F2C-82FB-3C6C0230C2A6}"
 EndProject
@@ -19,6 +19,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWindCoreLibrary", "NorthWindCoreLibrary\NorthWindCoreLibrary.csproj", "{C395DEF1-5510-444D-99B5-02C38D814216}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit test", "unit test", "{55C7EE1D-7561-4758-BAD7-E320CB93391C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthEntityTestProject", "NorthEntityTestProject\NorthEntityTestProject.csproj", "{5C5B9E41-D6F9-4C27-BA11-3E2298980119}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +48,14 @@ Global
 		{31162FC7-31DE-4B24-B84F-1B1D457CCF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31162FC7-31DE-4B24-B84F-1B1D457CCF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31162FC7-31DE-4B24-B84F-1B1D457CCF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C395DEF1-5510-444D-99B5-02C38D814216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C395DEF1-5510-444D-99B5-02C38D814216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C395DEF1-5510-444D-99B5-02C38D814216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C395DEF1-5510-444D-99B5-02C38D814216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5B9E41-D6F9-4C27-BA11-3E2298980119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5B9E41-D6F9-4C27-BA11-3E2298980119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5B9E41-D6F9-4C27-BA11-3E2298980119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5B9E41-D6F9-4C27-BA11-3E2298980119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +65,8 @@ Global
 		{65200499-A4C2-46FE-896B-68C347EF136D} = {2E882C32-AEBD-45A1-BAEC-26F16A21DBAD}
 		{8403A3E4-B9BA-47AE-9BF2-26A562BE3D1E} = {2E882C32-AEBD-45A1-BAEC-26F16A21DBAD}
 		{31162FC7-31DE-4B24-B84F-1B1D457CCF7E} = {F4726C39-B327-4B89-B6C1-15E781077476}
+		{C395DEF1-5510-444D-99B5-02C38D814216} = {2E882C32-AEBD-45A1-BAEC-26F16A21DBAD}
+		{5C5B9E41-D6F9-4C27-BA11-3E2298980119} = {55C7EE1D-7561-4758-BAD7-E320CB93391C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EAB71E9-592A-4CAD-8641-EE7BD4D395E0}
